@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './Components/NavBar';
 import HomePage from './Pages/HomePage';
+import SymbolPage from './Pages/SymbolPage';
 import {//below for using the router for spa navigation
   BrowserRouter as Router,
   Route,
@@ -16,6 +17,7 @@ function App() {
       <NavBar/>
       <Switch>{/* renders first matching route to url */}
       <Route path="/" component={HomePage} exact/>
+      <Route path="/symbol/:symbolName" component={SymbolPage}/>
       </Switch>
     </Router>
     </>
